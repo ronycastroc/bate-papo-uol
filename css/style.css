@@ -3,12 +3,69 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
+    
 }
 
 * {
     box-sizing: border-box;
 }
+
+.caixa-entrada {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.escondido {
+    display: none;
+}
+
+.logo-entrada img {
+    width: 130px;
+    height: 92px;
+    margin-top: 72px;
+}
+
+.inserir-nome input {
+    width: 261px;
+    height: 64px;
+    outline: none;
+    text-align: center;
+    border: 1px solid #D7D7D7;
+    margin-top: 70px;
+    border-radius: 4px;
+}
+
+.inserir-nome input::placeholder {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.entrar {
+    width: 109px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7E7E7;
+    margin-top: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.entrar p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #696969;
+}
+
 
 header {
    display: flex;
@@ -23,7 +80,7 @@ header {
 }
 
 .topo {
-    width: 375px;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -44,6 +101,7 @@ header {
     align-items: center;
 }
 
+
 .caixa-perfil {
     height: 80px;
     width: 80px;
@@ -63,12 +121,11 @@ footer {
     bottom: 0;
     z-index: 1;
     box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.068);
-    background-color: white;
-    
+    background-color: white;  
 }
 
 .bot {
-    width: 375px;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -88,7 +145,7 @@ footer {
     font-size: 30px;
 }
 
-input {
+.texto input {
     width: 250px;
     height: 80px;
     outline: none;
@@ -96,10 +153,11 @@ input {
     border: none;
 }
 
-input::placeholder {
+.texto input::placeholder {
     color: black;
     font-size: 18px;
     font-style: italic;
+
 }
 
 
@@ -108,29 +166,30 @@ section {
     display: flex;
    justify-content: center;
    width: 100%;
+   height: auto;
    background-color: rgb(241, 241, 241);
 }
 
 .caixa-conversa {
-    width: 375px;
-    height: 900px;
-    background-color: crimson;
+    width: 100%;
+    height: auto;
+    background-color: #F1F1F1;
     margin-top: 90px;
 }
 
 .entra-sai {
     width: 100%;
-    height: 40px;
+    height: auto;
     background-color: #DCDCDC;
     display: inline-flex;
     align-items: center;
-    
+    flex-wrap: wrap;
     margin-bottom: 3px;
 }
 
 .conversa {
     width: 100%;
-    height: 40px;
+    height: auto;
     background-color: white;
     display: inline-flex;
     align-items: center;
@@ -140,7 +199,7 @@ section {
 
 .reserva {
     width: 100%;
-    height: 40px;
+    height: auto;
     background-color: #FFDEDE;
     display: inline-flex;
     flex-wrap: wrap;
@@ -152,26 +211,21 @@ section {
     font-size: 14px;
     color: grey;
     margin-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .nome {
     font-size: 14px;
     font-weight: bold;
     margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.entrou {
+.entrou, .para, .texto {
     font-size: 14px;
     margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-
-.para {
-    font-size: 14px;
-    margin-left: 5px;
-}
-
-.texto {
-    font-size: 14px;
-    margin-left: 5px;
-}
-

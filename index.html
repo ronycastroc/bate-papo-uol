@@ -33,7 +33,7 @@
         <div class="bot">
 
             <div class="texto">
-                <input type="text" placeholder="Escreva aqui...">
+                <input class ='envia-texto' type="text" placeholder="Escreva aqui...">
             </div>
             
             <div class="caixa-enviar">
@@ -44,6 +44,21 @@
 
         </div>
     </footer>
+
+    <div class="caixa-entrada escondido">
+        <div class="logo-entrada">
+            <img src="img/logo 1.png" alt="">
+        </div>
+
+        <div class="inserir-nome">
+            <input class ='envia-nome' type="text"  placeholder="Digite seu nome">
+        </div>
+
+        <div class="entrar" onclick="entrar()">
+            <p>Entrar</p>
+        </div>
+        
+    </div>
 
     <section>
         <div class="caixa-conversa">
@@ -80,6 +95,7 @@
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
