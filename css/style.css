@@ -119,9 +119,8 @@ footer {
     height: 80px;
     position: fixed;
     bottom: 0;
-    z-index: 1;
     box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.068);
-    background-color: white;  
+    background-color: white; 
 }
 
 .bot {
@@ -130,7 +129,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
 .caixa-enviar {
@@ -160,8 +158,6 @@ footer {
 
 }
 
-
-
 section {
     display: flex;
    justify-content: center;
@@ -175,6 +171,7 @@ section {
     height: auto;
     background-color: #F1F1F1;
     margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 .entra-sai {
@@ -205,6 +202,7 @@ section {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3px;
+    
 }
 
 .hora {
@@ -228,4 +226,5 @@ section {
     margin-left: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    
 }
