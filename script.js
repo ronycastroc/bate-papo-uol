@@ -12,20 +12,14 @@ function entrar() {
     
     promise.then(entrou)
     promise.catch(naoEntrou)
+    setInterval(buscarMensagens, 3000)
 }
 
 function entrou() {
     const clickEntrar = document.querySelector('.entrar')
     clickEntrar.parentNode.classList.add('escondido')
     
-    caixaConversa.innerHTML += `
-    <div class="entra-sai">
-                <p class="hora">(09:21:45)</p>
-                <p class="nome">${login}</p>
-                <p class="entrou">entra na sala...</p>
-            </div>
-    `
-
+  
     setInterval(conexãoAtiva, 4000)
     
 }
@@ -44,6 +38,7 @@ function conexãoAtiva() {
     
     console.log(promise)
     
+    
 }
 
 function buscarMensagens() {
@@ -51,14 +46,13 @@ function buscarMensagens() {
 
     promise.then(renderizarMensagens)
 }
-setInterval(buscarMensagens, 3000)
+
 
 function renderizarMensagens(resposta) {
     chat = resposta.data
     const entraSai = document.querySelector('.entra-sai')
     const conversa = document.querySelector('.conversa')
-    const reserva = document.querySelector('.reserva')
-    console.log(chat[99])
+    const reserva = document.querySelector('.reserva')    
 
     caixaConversa.innerHTML = ''
 
@@ -71,7 +65,8 @@ function renderizarMensagens(resposta) {
                 <p class="nome">${chat[i].from}</p>
                 <p class="entrou">${chat[i].text}</p>
             </div>
-            `            
+            ` 
+                     
         }
 
         if(chat[i].type === 'message') {
@@ -97,8 +92,17 @@ function renderizarMensagens(resposta) {
             </div>
             `        
                 
+        } 
+        
+        if(chat[i] === chat[99]) {
+            const scroll = document.querySelector('.caixa-conversa div:last-child')
+            scroll.scrollIntoView()
+            console.log(scroll)
         }
+        
     }
+
+    
 }
 
 function enviarMensagem() {
@@ -117,7 +121,6 @@ function enviarMensagem() {
     promise.catch(naoEnviou)
 
     inp.value = ''
-    enviaChat.focus()
 }
 
 function naoEnviou(error) {
