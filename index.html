@@ -21,7 +21,7 @@
             </div>
             
             <div class="caixa-perfil">
-                <div class="perfil">
+                <div class="perfil" onclick="onlinePeople()">
                     <ion-icon name="people"></ion-icon>
                 </div>
             </div>
@@ -46,6 +46,7 @@
     </footer>
 
     <div class="caixa-entrada">
+        
         <div class="logo-entrada">
             <img src="img/logo 1.png" alt="">
         </div>
@@ -57,7 +58,90 @@
         <div class="entrar" onclick="entrar()">
             <p>Entrar</p>
         </div>
+
+    </div>
+
+    <div class="caixa-container escondido2">
         
+        <div class="caixa-transparente" onclick="fecharCaixa()"></div>
+        
+        <div class="caixa-contato">
+            
+            <div class="topo-contato">
+                <h1>Escolha um contado para enviar mensagem:</h1>
+            </div>
+            
+            <div class="destinatario destino">
+
+                <!-- <div class="contato-online" onclick=destinatario(this)>
+                    <div class="caixa-icon">
+                        <ion-icon name="people"></ion-icon>
+                        <p>Todos</p>
+                    </div>
+                    
+                    <div class="caixa-check">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>                
+                </div>
+
+                <div class="contato-online" onclick=destinatario(this)>
+                    <div class="caixa-icon">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <p>Joao</p>
+                    </div>
+                    
+                    <div class="caixa-check">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>               
+                </div>
+                
+                <div class="contato-online" onclick=destinatario(this)>
+                    <div class="caixa-icon">
+                        <ion-icon name="person-circle"></ion-icon>
+                        <p>Joao</p>
+                    </div>
+                    
+                    <div class="caixa-check">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>               
+                </div>        
+             -->
+            </div>
+
+            <div class="visibilidade">
+                <h1>Escolha a visibilidade:</h1>
+            </div>
+
+            <div class="pub-res type">
+            
+                <div class="pubres" onclick="visibilidade(this)">
+                    <div class="caixa-icon">
+                        <ion-icon name="lock-open"></ion-icon>
+                        <p>Público</p>
+                    </div>                
+                    
+                    <div class="caixa-check">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>          
+                </div>
+
+                <div class="pubres" onclick="visibilidade(this)">
+                    <div class="caixa-icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                        <p>Reservadamente</p>
+                    </div>               
+
+                    <div class="caixa-check">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>          
+                </div>
+
+            </div>  
+
+        </div>
+
+
+
     </div>
 
     <section>
